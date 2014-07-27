@@ -65,12 +65,9 @@ names(data.summary) <- c("mean", "sd")
 ##create summary.aggregate by activity and subject
 summary.aggregate <- aggregate(data, by=list(data$activity, data$subjects), FUN=mean, na.rm=TRUE)
 
-
 ##write data.summary and summary.aggregate out to files
-write.table(data.summary, file="./dataSummary.csv")
-write.table(summary.aggregate, file="./summaryAggregate.csv")
-
-
+write.table(data.summary, file="./dataSummary.txt")
+write.table(summary.aggregate, file="./summaryAggregate.txt")
 
 
 }

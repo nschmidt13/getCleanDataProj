@@ -1,5 +1,4 @@
-
-myFunc <- function(){
+run_analysis <- function(){
 ##read in features which are the heading names for the X_test.txt file
 features <- read.table("./UCI HAR Dataset/features.txt", sep="")
 features <- features$V2
@@ -68,8 +67,6 @@ summary.aggregate <- aggregate(data, by=list(data$activity, data$subjects), FUN=
 ##write data.summary and summary.aggregate out to files
 write.table(data.summary, file="./dataSummary.txt")
 write.table(summary.aggregate, file="./summaryAggregate.txt")
-
-
 }
 
 
